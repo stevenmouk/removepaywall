@@ -1,13 +1,23 @@
 import Image from "next/image";
 import { Nunito } from "next/font/google";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Faq from "@/components/Faq";
 
 const inter = Nunito({ subsets: ["latin"] });
 
-export default function Home() {
-  const [input, setInput] = useState(null);
+export default function Home({ context }) {
+  const [input, setInput] = useState("");
+  useEffect(() => {
+    // const newInput = context.id.reduce((acc, part, index) => {
+    //   // Add double slash after the first part, otherwise add a single slash
+    //   const separator = index === 0 ? "" : index === 1 ? "//" : "/";
+
+    //   return acc + separator + part;
+    // }, "");
+    setInput(context.article);
+  }, [context]);
+
   function handleSubmit(e) {
     e.preventDefault();
     // console.log(e.target[0].value);
@@ -104,6 +114,7 @@ export default function Home() {
                           className="block p-3 pl-10 w-full text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                           placeholder="Enter Article URL"
                           id="email"
+                          value={input}
                           onInput={handleInputChange}
                           required
                         />
@@ -228,4 +239,18 @@ export default function Home() {
       </main>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  console.log(context);
+  // Fetch the articles from the API route
+  // console.log(context);
+  const query = context.query;
+
+  //console.log(res);
+  return {
+    props: {
+      context: query,
+    },
+  };
 }
