@@ -18,6 +18,19 @@ export default function App({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
       </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-CKJDVN2F56"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-CKJDVN2F56');
+        `}
+      </Script>
       <Component {...pageProps} />
     </>
   );
