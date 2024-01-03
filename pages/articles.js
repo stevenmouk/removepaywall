@@ -15,7 +15,7 @@ export default function Home({ context }) {
 
     //   return acc + separator + part;
     // }, "");
-    setInput(context.article.split("?")[0]);
+    setInput(context.article);
   }, [context]);
 
   function handleSubmit(e) {
@@ -26,26 +26,28 @@ export default function Home({ context }) {
   function handleStuff(e) {
     e.preventDefault();
     if (input != null && input.trim() != "") {
-      window.open(`https://archive.is/${input.trim()}`);
+      window.open(`https://archive.is/newest/${input.trim().split("?")[0]}`);
     }
   }
 
   function handleStuff2(e) {
     e.preventDefault();
     if (input != null && input.trim() != "") {
-      window.open(`https://web.archive.org/${input.trim()}`);
+      window.open(`https://web.archive.org/${input.trim().split("?")[0]}`);
     }
   }
   function handleStuff3(e) {
     if (input != null && input.trim() != "") {
       e.preventDefault();
-      window.open(`https://webcache.googleusercontent.com/search?q=cache:${input.trim()}`);
+      window.open(
+        `https://webcache.googleusercontent.com/search?q=cache:${input.trim().split("?")[0]}`
+      );
     }
   }
   function handleStuff4(e) {
     e.preventDefault();
     if (input != null && input.trim() != "") {
-      window.open(`https://12ft.io/${input.trim()}`);
+      window.open(`https://12ft.io/${input.trim().split("?")[0]}`);
     }
   }
 

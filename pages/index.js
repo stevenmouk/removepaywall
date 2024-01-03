@@ -16,7 +16,7 @@ export default function Home() {
   function handleStuff(e) {
     e.preventDefault();
     if (input != null && input.trim() != "") {
-      window.open(`https://archive.is/${input.trim()}`);
+      window.open(`https://archive.is/newest/${input.trim()}`);
     }
   }
 
