@@ -42,7 +42,7 @@ export default function Home() {
   function handleInputChange(e) {
     e.preventDefault();
     // console.log(e.target.value);
-    setInput(e.target.value);
+    setInput(e.target.value.split("?")[0]);
   }
   return (
     <>

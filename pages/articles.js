@@ -15,7 +15,7 @@ export default function Home({ context }) {
 
     //   return acc + separator + part;
     // }, "");
-    setInput(context.article);
+    setInput(context.article.split("?")[0]);
   }, [context]);
 
   function handleSubmit(e) {
@@ -52,7 +52,7 @@ export default function Home({ context }) {
   function handleInputChange(e) {
     e.preventDefault();
     // console.log(e.target.value);
-    setInput(e.target.value);
+    setInput(e.target.value.split("?")[0]);
   }
   return (
     <>
