@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        #<title>Archive Buttons | Free paywall Remover</title>
+        <title>Archive Buttons | Free Paywall Remover</title>
         <meta
           name="description"
           content="Remove paywalls on any news article with Archive Buttons. This Free online paywall remover works on hundreds of news sites."
