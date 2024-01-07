@@ -74,7 +74,7 @@ export default function Home({ context }) {
           </div>
         </nav>
 
-        <section className="bg-[#FFFEF0] dark:bg-gray-900 min-h-screen mt-20">
+        <section className="bg-[#FFFEF0] dark:bg-gray-900 min-h-screen pt-20">
           <div className="flex flex-col items-center justify-between lg:flex-row py-8 px-4 mx-auto max-w-screen-xl lg:py-16 ">
             <div className="place-self-center text-center lg:col-span-7">
               <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -221,17 +221,20 @@ export default function Home({ context }) {
 
         <Faq />
 
-        <footer className="p-4  sm:p-6 dark:bg-gray-800">
+        <footer className="p-4 bg-[#FFFEF0] sm:p-6 dark:bg-gray-800">
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2024{" "}
-              <a href="https://flowbite.com" className="hover:underline">
+              <a href="/" className="hover:underline">
                 Archive Buttons™
               </a>
               . All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+              <Link className="text-gray-500 dark:hover:text-white" href="/blog">
+                blog
+              </Link>
               <p className="text-gray-500 dark:hover:text-white mr-24">
                 contact: archivebuttons@gmail.com
               </p>

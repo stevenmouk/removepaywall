@@ -20,7 +20,7 @@ export default function Footer() {
         />
       </Head>
 
-      <section className="relative z-20 overflow-hidden  pt-[90px] pb-[90px] bg-[#FFFEF0]">
+      <section className="relative z-20 overflow-hidden  pt-[90px] pb-[90px] bg-[#FFFEF0] text-black">
         <div className="container mx-auto">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4">
@@ -36,11 +36,11 @@ export default function Footer() {
 
           <div className="text-center mb-[60px] unselectable">
             <div>
-              <div className="faqs-container">
+              <div className="faqs-container text-black">
                 <div className="pointer">
                   <div className="faq faq-0" onClick={(e) => toggleFAQ("faq-0")}>
-                    <h3 className="faq-title">What is Archive Buttons?</h3>
-                    <p className="faq-text">
+                    <h3 className="faq-title  ">What is Archive Buttons?</h3>
+                    <p className="faq-text text-black ">
                       Archive buttons is a collection of the top archive and remove paywall
                       websites. These are the best ways to remove the paywall on any article you may
                       want to read. The reason you may want to test out different websites is
@@ -59,7 +59,7 @@ export default function Footer() {
                 <div className="pointer">
                   <div className="faq faq-1" onClick={(e) => toggleFAQ("faq-1")}>
                     <h3 className="faq-title">How does Archive Buttons work?</h3>
-                    <p className="faq-text">
+                    <p className="faq-text text-black">
                       The idea is pretty simple. We collected the top archive and remove paywall
                       websites and got them to work from one url. This way you can enter your
                       article url and find at least one website that has that article without a
@@ -75,7 +75,7 @@ export default function Footer() {
                 <div className="pointer">
                   <div className="faq faq-3" onClick={(e) => toggleFAQ("faq-3")}>
                     <h3 className="faq-title">Is this Legal?</h3>
-                    <p className="faq-text">
+                    <p className="faq-text text-black">
                       Yes, this is completely legal. We direct users to third party websites that
                       remove the paywall. We are not connected to these websites. Also, archiving
                       websites are completely legal. So you can read articles without paywalls and
@@ -91,7 +91,7 @@ export default function Footer() {
                 <div className="pointer">
                   <div className="faq faq-4" onClick={(e) => toggleFAQ("faq-4")}>
                     <h3 className="faq-title">What websites does it work for?</h3>
-                    <p className="faq-text">
+                    <p className="faq-text text-black">
                       We tested this on hundreds of the top news websites and it has not failed yet.
                       There was always at least one website that was able to remove the paywall.
                     </p>
@@ -105,7 +105,7 @@ export default function Footer() {
                 <div className="pointer">
                   <div className="faq faq-5" onClick={(e) => toggleFAQ("faq-5")}>
                     <h3 className="faq-title">Is this free?</h3>
-                    <p className="faq-text">
+                    <p className="faq-text text-black">
                       Absolutely! We are glad people can remove paywalls on articles and read them
                       for free. Enjoy free news!
                     </p>
