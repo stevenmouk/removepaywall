@@ -220,9 +220,14 @@ export default function Home() {
             </span>
 
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+              <Link className="text-gray-500 dark:hover:text-white" href="/privacy">
+                Privacy Policy
+              </Link>
+              <span>|</span>
               <Link className="text-gray-500 dark:hover:text-white" href="/blog">
                 blog
               </Link>
+              <span>|</span>
               <p className="text-gray-500 dark:hover:text-white mr-24">
                 contact: archivebuttons@gmail.com
               </p>
