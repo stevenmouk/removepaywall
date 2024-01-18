@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/images/fav_pac/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
+        <meta name="google-adsense-account" content="ca-pub-5014630772635761"></meta>
       </Head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-CKJDVN2F56"
