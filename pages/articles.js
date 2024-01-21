@@ -44,6 +44,12 @@ export default function Home({ context }) {
       );
     }
   }
+  function handleStuff5(e) {
+    e.preventDefault();
+    if (input != null && input.trim() != "") {
+      window.open(`https://removepaywall.com/${input.trim()}`);
+    }
+  }
   function handleStuff4(e) {
     e.preventDefault();
     if (input != null && input.trim() != "") {
@@ -171,6 +177,20 @@ export default function Home({ context }) {
                     width="25"
                   ></Image>
                   <div className="pl-3 font-bold">Open in Archive.org</div>
+                </div>
+              </div>
+              <div
+                onClick={handleStuff5}
+                className="border-[1px] min-w-[300px] sm:min-w-[400px]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
+              >
+                <div className="flex flex-row items-center justify-center ">
+                  <Image
+                    src="/images/remove.svg"
+                    alt="remove paywall image"
+                    height="30"
+                    width="30"
+                  ></Image>
+                  <div className="pl-3 font-bold">Open in Removepaywall.com</div>
                 </div>
               </div>
               <div

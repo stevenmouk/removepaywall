@@ -35,7 +35,7 @@ export default function Home() {
   function handleStuff4(e) {
     e.preventDefault();
     if (input != null && input.trim() != "") {
-      window.open(`https://12ft.io/${input.trim()}`);
+      window.open(`https://removepaywall.com/${input.trim()}`);
     }
   }
 
@@ -43,6 +43,12 @@ export default function Home() {
     e.preventDefault();
     // console.log(e.target.value);
     setInput(e.target.value.split("?")[0]);
+  }
+  function handleStuff5(e) {
+    e.preventDefault();
+    if (input != null && input.trim() != "") {
+      window.open(`https://12ft.io/${input.trim()}`);
+    }
   }
   return (
     <>
@@ -130,7 +136,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="  md:col-span-5 flex flex-shrink flex-col space-y-7 items-center justify-center relative h-[400px] min-w-[400px] ">
+            <div className="  md:col-span-5 flex flex-shrink flex-col space-y-7 items-center justify-center relative h-[500px] lg:h-[400px] min-w-[400px] ">
               {/* <Image src="/images/forest.png" alt="mockup" className="rounded-xl" fill /> */}
               <div
                 onClick={handleStuff}
@@ -166,12 +172,21 @@ export default function Home() {
               >
                 <div className="flex flex-row items-center justify-center ">
                   <Image
-                    src="/images/12.svg"
-                    alt="12ft archive image"
+                    src="/images/remove.svg"
+                    alt="remove paywall image"
                     height="30"
                     width="30"
                   ></Image>
+                  <div className="pl-3 font-bold">Open in Removepaywall.com</div>
+                </div>
+              </div>
 
+              <div
+                onClick={handleStuff5}
+                className="border-[1px] min-w-[300px] sm:min-w-[400px]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
+              >
+                <div className="flex flex-row items-center justify-center ">
+                  <Image src="/images/12.svg" alt="12 ft image" height="30" width="30"></Image>
                   <div className="pl-3 font-bold">Open in 12ft.io</div>
                 </div>
               </div>
