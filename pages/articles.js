@@ -67,11 +67,12 @@ export default function Home({ context }) {
       <main>
         <nav className="bg-[#FFFEF0] border-gray-200 px-4 lg:px-6 pt-2.5 ">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <div
-              className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className}`}
+            <Link
+              href="/"
+              className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full cursor-pointer ${inter.className}`}
             >
               Archive Buttons
-            </div>
+            </Link>
             <div className="flex items-center lg:order-2"></div>
             <div
               className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"

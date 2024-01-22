@@ -19,6 +19,11 @@ export default function App({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
         <meta name="google-adsense-account" content="ca-pub-5014630772635761"></meta>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5014630772635761"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-CKJDVN2F56"
