@@ -150,7 +150,7 @@ export default function Home({ context }) {
                 </div>
               </div>
             </div>
-            <div className="  md:col-span-5 flex flex-shrink flex-col space-y-7 items-center justify-center relative h-[400px] min-w-[400px] ">
+            <div className="  md:col-span-5 flex flex-shrink flex-col space-y-7 items-center justify-center relative h-[500px] lg:h-[400px] min-w-[400px]  ">
               {/* <Image src="/images/forest.png" alt="mockup" className="rounded-xl" fill /> */}
               <div
                 onClick={handleStuff}
