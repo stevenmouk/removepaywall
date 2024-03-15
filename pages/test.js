@@ -5,11 +5,10 @@ export default function test() {
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=1024 height=100%" />
-        {/* <meta
+        <meta
           name="viewport"
           content="width=device-width; initial-scale=.5; maximum-scale=.5; minimum-scale=.5;"
-        /> */}
+        />
       </Head>
       <div className="w-[100%] min-h-screen flex  items-center justify-center">
         <iframe
