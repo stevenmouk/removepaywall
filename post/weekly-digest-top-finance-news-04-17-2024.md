@@ -2,7 +2,7 @@
 title: "Weekly Digest - Top Finance News - 04/17/2024 "
 date: "April 17, 2024"
 cover_image: "/images/blog_imgs/house-moves.webp"
-meta_description: "Unlock news for free! Learn ethical ways to remove paywalls. Explore practical strategies and access articles without any paywall. Dive into the world of paywall removers for free news."
+meta_description: "Unlock news without any paywalls. Here is the top finance news we read without any paywalls. We cover some great topics on AI robots, Apple news, tiktok bans and more. Enjoy read more news and breaking down paywalls!"
 ---
 
 # Top Finance News this Week. All Without Annoying Paywalls
@@ -11,7 +11,7 @@ You know were all about getting rid of paywalls. He are some of the top news sto
 
 ## 1) US House moves closer to vote over aid for Ukraine and Israel
 
-<img src="/images/blog_imgs/house-moves.webp"/>
+<img alt="article image" src="/images/blog_imgs/house-moves.webp"/>
 
 <br/>
 <br/>
@@ -34,7 +34,7 @@ Overall, the proposed aid package reflects a bipartisan effort to support key al
 
 ## 2) High-speed trader Jane Street raked in $4.4bn at start of 2024
 
-<img src="/images/blog_imgs/jane-street.webp"/>
+<img alt="article image" src="/images/blog_imgs/jane-street.webp"/>
 
 <br/>
 <br/>
@@ -55,7 +55,7 @@ While Jane Street's net trading activity experienced a modest decline in 2023 du
 
 ## 3) House Moves Toward Bundling TikTok Bill With Aid to Ukraine and Israel
 
-<img src="/images/blog_imgs/tiktok.webp"/>
+<img alt="article image" src="/images/blog_imgs/tiktok.webp"/>
 
 <br/>
 <br/>
@@ -78,7 +78,7 @@ Ultimately, the outcome of this legislative push will shape the future of TikTok
 
 ## 4) Atlas, a Humanoid Robot From Boston Dynamics, Is Leaping Into Retirement
 
-<img src="/images/blog_imgs/robot.webp"/>
+<img alt="article image" src="/images/blog_imgs/robot.webp"/>
 
 <br/>
 <br/>
@@ -99,7 +99,7 @@ The original Atlas, funded by the Defense Advanced Research Projects Agency (DAR
 
 ## 5) Apple CEO to Meet Singapore Leader to Wrap Whirlwind Asia Tour
 
-<img src="/images/blog_imgs/apple_ceo.webp"/>
+<img alt="article image" src="/images/blog_imgs/apple_ceo.webp"/>
 
 <br/>
 <br/>
