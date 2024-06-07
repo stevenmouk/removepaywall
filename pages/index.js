@@ -53,18 +53,39 @@ export default function Home() {
   return (
     <>
       <main>
-        <nav className="bg-[#FFFEF0] border-gray-200 px-4 lg:px-6 pt-2.5 ">
-          <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <div
-              className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className}`}
-            >
-              Archive Buttons
+        <nav class="relative mt-2.5 left-0 top-0 z-50 flex h-navbar-height w-full items-center justify-between overflow-hidden px-3 lg:px-6  bg-[#FFFEF0] [transition:all_0.09s_ease-in] snipcss-pSbyI">
+          <div class="flex items-center">
+            <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+              <div
+                className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className}`}
+              >
+                Archive Buttons
+              </div>
+              <div className="flex items-center lg:order-2"></div>
+              <div
+                className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+                id="mobile-menu-2"
+              ></div>
             </div>
-            <div className="flex items-center lg:order-2"></div>
-            <div
-              className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-              id="mobile-menu-2"
-            ></div>
+          </div>
+          <div class="flex items-center">
+            <div class="absolute left-[50%] top-0 hidden h-[100%] -translate-x-1/2 items-center [transition:transform_0.3s_ease-in-out,opacity_0.2s_ease-in-out] lg:flex ">
+              <Link
+                href="https://pure.news"
+                target="_blank"
+                class="whitespace-nowrap font-roboto-condensed text-17px font-extralight uppercase text-time-black antialiased hover:text-time-red flex items-center gap-1.5"
+              >
+                Sign Up for Our Finance Newsletter
+              </Link>
+            </div>
+            <Link
+              href="https://pure.news"
+              target="_blank"
+              class="rounded-3px bg-time-red px-3 hover:text-white py-2.5 font-roboto-condensed text-base font-bold uppercase tracking-1px text-white antialiased [transition:transform_0.3s_ease-in-out,opacity_0.2s_ease-in-out] "
+            >
+              <span class="lg:hidden">Subscribe</span>
+              <span class="hidden lg:inline">Subscribe</span>
+            </Link>
           </div>
         </nav>
 

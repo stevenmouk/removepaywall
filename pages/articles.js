@@ -82,7 +82,7 @@ export default function Home({ context }) {
         </nav>
 
         <section className="bg-[#FFFEF0] dark:bg-gray-900 min-h-screen pt-20">
-          <div className="flex flex-col items-center justify-between lg:flex-row py-8 px-4 mx-auto max-w-screen-xl lg:py-16 ">
+          <div className="flex flex-col items-center justify-between py-8 px-4 mx-auto max-w-screen-xl lg:py-16 ">
             <div className="place-self-center text-center lg:col-span-7">
               <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                 <div className="mx-auto max-w-screen-md sm:text-center">
@@ -150,11 +150,11 @@ export default function Home({ context }) {
                 </div>
               </div>
             </div>
-            <div className="  md:col-span-5 flex flex-shrink flex-col space-y-7 items-center justify-center relative h-[500px] lg:h-[400px] min-w-[400px]  ">
+            <div className="  w-[100%] md:col-span-5 flex flex-shrink flex-col space-y-7 items-center relative h-fit   ">
               {/* <Image src="/images/forest.png" alt="mockup" className="rounded-xl" fill /> */}
               <div
                 onClick={handleStuff}
-                className="border-[1px]  min-w-[300px] sm:min-w-[400px] h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
+                className="border-[1px] flex items-center justify-center w-[80%] h-fit py-6 rounded-full  shadow-sm hover:shadow-md transition cursor-pointer "
               >
                 <div className="flex flex-row items-center justify-center ">
                   <Image
@@ -166,9 +166,19 @@ export default function Home({ context }) {
                   <div className="pl-3 font-bold text-gray-900">Open in Archive.is</div>
                 </div>
               </div>
+              <div className="w-[100%] h-[600px] flex  items-center justify-center">
+                <iframe
+                  src={`https://archive.today/newest/${input.trim()}`}
+                  width="100%"
+                  height="600px"
+                  scrolling="yes"
+                  className="items-center justify-center flex sm:w-[80%] w-[100%]"
+                  frameborder="0px"
+                ></iframe>
+              </div>
               <div
                 onClick={handleStuff2}
-                className="border-[1px] min-w-[300px] sm:min-w-[400px]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
+                className="border-[1px] w-[80%] h-fit py-6 rounded-full  shadow-sm hover:shadow-md transition cursor-pointer "
               >
                 <div className="flex flex-row items-center justify-center ">
                   <Image
@@ -182,7 +192,7 @@ export default function Home({ context }) {
               </div>
               <div
                 onClick={handleStuff5}
-                className="border-[1px] min-w-[300px] sm:min-w-[400px]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
+                className="border-[1px] w-[80%]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
               >
                 <div className="flex flex-row items-center justify-center ">
                   <Image
