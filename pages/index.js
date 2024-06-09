@@ -53,39 +53,18 @@ export default function Home() {
   return (
     <>
       <main>
-        <nav className="relative mt-2.5 left-0 top-0 z-50 flex h-navbar-height w-full items-center justify-between overflow-hidden px-3 lg:px-6  bg-[#FFFEF0] [transition:all_0.09s_ease-in] snipcss-pSbyI">
-          <div className="flex items-center">
-            <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-              <div
-                className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className}`}
-              >
-                Archive Buttons
-              </div>
-              <div className="flex items-center lg:order-2"></div>
-              <div
-                className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
-                id="mobile-menu-2"
-              ></div>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="absolute left-[50%] top-0 hidden h-[100%] -translate-x-1/2 items-center [transition:transform_0.3s_ease-in-out,opacity_0.2s_ease-in-out] lg:flex ">
-              <Link
-                href="https://pure.news"
-                target="_blank"
-                className="whitespace-nowrap font-roboto-condensed text-17px font-extralight uppercase text-time-black antialiased hover:text-time-red flex items-center gap-1.5"
-              >
-                Sign Up for Our Finance Newsletter
-              </Link>
-            </div>
-            <Link
-              href="https://pure.news"
-              target="_blank"
-              className="rounded-3px bg-time-red px-3 hover:text-white py-2.5 font-roboto-condensed text-base font-bold uppercase tracking-1px text-white antialiased [transition:transform_0.3s_ease-in-out,opacity_0.2s_ease-in-out] "
+        <nav className="bg-[#FFFEF0] border-gray-200 px-4 lg:px-6 pt-2.5 ">
+          <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+            <div
+              className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className}`}
             >
-              <span className="lg:hidden">Subscribe</span>
-              <span className="hidden lg:inline">Subscribe</span>
-            </Link>
+              Archive Buttons
+            </div>
+            <div className="flex items-center lg:order-2"></div>
+            <div
+              className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+              id="mobile-menu-2"
+            ></div>
           </div>
         </nav>
 
@@ -153,6 +132,44 @@ export default function Home() {
                         Read our Privacy Policy
                       </a> */}
                     </div>
+                    <section className="bg-gray-900 rounded-xl flex flex-row mt-10">
+                      <Image
+                        src="/images/test4.png"
+                        width={200}
+                        height={100}
+                        className="object-fit w-[250px] h-[250px] rounded-xl p-3 hidden sm:inline"
+                      ></Image>
+                      <div>
+                        <div className=" px-4 mx-auto max-w-screen-xl lg:px-6">
+                          <div className="mx-auto max-w-screen-md sm:text-center">
+                            <h2 className="mb-4 text-3xl tracking-tight font-extrabold  sm:text-4xl text-white">
+                              Sign up for our Finance Newsletter
+                            </h2>
+                            <p className="mx-auto  max-w-2xl font-light   sm:text-xl text-gray-400">
+                              Stay up to date with the latest finance news and market peformance
+                              without the clutter.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="w-full flex items-center justify-center">
+                          <div
+                            className="hover:text-white focus:outline-none text-white bg-red-500
+                          hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg
+                          text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700
+                          dark:focus:ring-red-900 w-[30%] "
+                          >
+                            <Link
+                              href="https://pure.news"
+                              target="_blank"
+                              className=" hover:text-white text-white"
+                            >
+                              Subscribe
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
                   </form>
                 </div>
               </div>
