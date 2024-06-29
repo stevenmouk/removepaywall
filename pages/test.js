@@ -11,6 +11,7 @@ export default function test() {
         />
       </Head>
 
+      <div className="fixed bg-white h-24 w-full top-0">tesr</div>
       <div className="w-[100%] min-h-screen flex  items-center justify-center">
         <iframe
           src="https://archive.today/newest/https://www.nytimes.com/2024/02/09/travel/icon-of-the-seas-cruise-royal-caribbean.html"
