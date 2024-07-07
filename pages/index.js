@@ -3,14 +3,19 @@ import { Nunito } from "next/font/google";
 import Link from "next/link";
 import { useState } from "react";
 import Faq from "@/components/Faq";
+import { useRouter } from "next/navigation";
 
 const inter = Nunito({ subsets: ["latin"] });
 
 export default function Home() {
   const [input, setInput] = useState(null);
+
+  const router = useRouter();
   function handleSubmit(e) {
     e.preventDefault();
     // console.log(e.target[0].value);
+
+    router.push(`/articles?article=${e.target[0].value}`);
   }
 
   function handleStuff(e) {
@@ -55,11 +60,13 @@ export default function Home() {
       <main>
         <nav className="bg-[#FFFEF0] border-gray-200 px-4 lg:px-6 pt-2.5 ">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-            <div
-              className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className}`}
-            >
-              Archive Buttons
-            </div>
+            <Link href="/" className="cursor-pointer">
+              <div
+                className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className}`}
+              >
+                Archive Buttons
+              </div>
+            </Link>
             <div className="flex items-center lg:order-2"></div>
             <div
               className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
@@ -69,7 +76,7 @@ export default function Home() {
         </nav>
 
         <section className="bg-[#FFFEF0] dark:bg-gray-900 min-h-screen pt-20">
-          <div className="flex flex-col items-center justify-between lg:flex-row py-8 px-4 mx-auto max-w-screen-xl lg:py-16 ">
+          <div className="flex flex-col items-center justify-between  py-8 px-4 mx-auto  lg:py-16 ">
             <div className="place-self-center text-center lg:col-span-7">
               <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                 <div className="mx-auto max-w-screen-md sm:text-center">
@@ -122,6 +129,12 @@ export default function Home() {
                           Search
                         </button> */}
                       </div>
+                      <button
+                        type="submit"
+                        className="py-3 px-5  ml-2 text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-red-500 border-red-500  rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-white dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                      >
+                        Search
+                      </button>
                     </div>
                     <div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">
                       We all hate paywalls, these paywall removers can help with that.
@@ -171,75 +184,6 @@ export default function Home() {
                       </div>
                     </section>
                   </form>
-                </div>
-              </div>
-            </div>
-            <div className="  md:col-span-5 flex flex-shrink flex-col space-y-7 items-center justify-center relative h-[500px] lg:h-[400px] min-w-[400px] ">
-              {/* <Image src="/images/forest.png" alt="mockup" className="rounded-xl" fill /> */}
-              <div
-                onClick={handleStuff}
-                className="border-[1px]  min-w-[300px] sm:min-w-[400px] h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
-              >
-                <div className="flex flex-row items-center justify-center ">
-                  <Image
-                    src="/images/lplplp.png"
-                    alt="archive image"
-                    height="30"
-                    width="30"
-                  ></Image>
-                  <div className="pl-3 font-bold text-gray-900">Open in Archive.is</div>
-                </div>
-              </div>
-              <div
-                onClick={handleStuff2}
-                className="border-[1px] min-w-[300px] sm:min-w-[400px]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
-              >
-                <div className="flex flex-row items-center justify-center ">
-                  <Image
-                    src="/images/rf.svg"
-                    alt="web archive image"
-                    height="25"
-                    width="25"
-                  ></Image>
-                  <div className="pl-3 font-bold">Open in Archive.org</div>
-                </div>
-              </div>
-              <div
-                onClick={handleStuff4}
-                className="border-[1px] min-w-[300px] sm:min-w-[400px]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
-              >
-                <div className="flex flex-row items-center justify-center ">
-                  <Image
-                    src="/images/remove.svg"
-                    alt="remove paywall image"
-                    height="30"
-                    width="30"
-                  ></Image>
-                  <div className="pl-3 font-bold">Open in Removepaywall.com</div>
-                </div>
-              </div>
-
-              <div
-                onClick={handleStuff5}
-                className="border-[1px] min-w-[300px] sm:min-w-[400px]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
-              >
-                <div className="flex flex-row items-center justify-center ">
-                  <Image src="/images/12.svg" alt="12 ft image" height="30" width="30"></Image>
-                  <div className="pl-3 font-bold">Open in 12ft.io</div>
-                </div>
-              </div>
-              <div
-                onClick={handleStuff3}
-                className="border-[1px] min-w-[300px] sm:min-w-[400px]  h-fit py-6 rounded-full md:w-auto shadow-sm hover:shadow-md transition cursor-pointer "
-              >
-                <div className="flex flex-row items-center justify-center ">
-                  <Image
-                    src="/images/google.png"
-                    alt="google cache image"
-                    height="30"
-                    width="30"
-                  ></Image>
-                  <div className="pl-3 font-bold">Open in Google Cache</div>
                 </div>
               </div>
             </div>
