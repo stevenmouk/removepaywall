@@ -115,7 +115,7 @@ export default function test() {
           </button>
         </div>
       </div>
-      <div className="w-[100%] min-h-screen flex  items-center justify-center">
+      <div className="w-[100%] h-[100%] flex  items-center justify-center">
         <iframe
           src="https://archive.today/newest/https://www.nytimes.com/2024/02/09/travel/icon-of-the-seas-cruise-royal-caribbean.html"
           width="100%"
