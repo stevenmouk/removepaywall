@@ -177,14 +177,7 @@ export default function Home({ context }) {
         </div>
       </div>
       <div className="w-[100%] min-h-screen flex  items-center justify-center">
-        <iframe
-          src={article}
-          width="100%"
-          height="4000px"
-          scrolling="yes"
-          frameborder="0px"
-          rel="nofollow"
-        ></iframe>
+        <iframe src={article} width="100%" height="4000px" rel="nofollow"></iframe>
       </div>
 
       <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700  " />
