@@ -119,7 +119,7 @@ export default function test() {
         <iframe
           src="https://archive.today/newest/https://www.nytimes.com/2024/02/09/travel/icon-of-the-seas-cruise-royal-caribbean.html"
           width="100%"
-          height="1000px"
+          height="2000px"
           rel="nofollow"
         ></iframe>
       </div>
