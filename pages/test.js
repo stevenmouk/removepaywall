@@ -115,11 +115,11 @@ export default function test() {
           </button>
         </div>
       </div>
-      <div className="w-[100%] h-[10000px] flex  items-center justify-center">
+      <div className="w-[100%] h-[100vh] overflow-scroll flex  items-center justify-center">
         <iframe
           src="https://archive.today/newest/https://www.nytimes.com/2024/02/09/travel/icon-of-the-seas-cruise-royal-caribbean.html"
           width="100%"
-          height="10000px"
+          height="1000px"
           rel="nofollow"
         ></iframe>
       </div>
