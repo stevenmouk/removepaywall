@@ -176,11 +176,10 @@ export default function Home({ context }) {
           </button>
         </div>
       </div>
-      <div className="w-[100%] min-h-screen flex  items-center justify-center">
-        <iframe src={article} width="100%" height="4000px" rel="nofollow"></iframe>
+      <div className="w-[100%] h-[100vh] overflow-scroll flex    justify-center">
+        <iframe src={article} width="100%" height="2000px" rel="nofollow"></iframe>
       </div>
-
-      <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700  " />
+      {/* <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700  " />
 
       <Faq />
 
@@ -209,7 +208,7 @@ export default function Home({ context }) {
             </p>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }
