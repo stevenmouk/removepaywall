@@ -145,7 +145,7 @@ export default function Home() {
                         Read our Privacy Policy
                       </a> */}
                     </div>
-                    <section className="bg-gray-900 rounded-xl flex flex-row mt-10">
+                    {/* <section className="bg-gray-900 rounded-xl flex flex-row mt-10">
                       <Image
                         src="/images/test4.png"
                         width={200}
@@ -179,6 +179,7 @@ export default function Home() {
                         </div>
                       </div>
                     </section>
+                  */}
                   </form>
                 </div>
               </div>
