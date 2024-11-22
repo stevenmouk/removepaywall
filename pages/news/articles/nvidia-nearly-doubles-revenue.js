@@ -24,7 +24,7 @@ var pageData = {
   figure_license: "CC BY-SA 4.0",
   figure_license_url: "https://creativecommons.org/licenses/by/4.0/",
   page_image_src_rel: "/images/nvidia.webp",
-  img_url_full: "https://archivebuttons/images/nvidia.webp",
+  img_url_full: "https://archivebuttons.com/images/nvidia.webp",
   figure_p: "Nvidia nearly doubles revenue as AI chip demand remains strong",
 };
 
