@@ -14,6 +14,13 @@ var listData = [
     category: "Technology",
     date: " Nov 21, 2024",
   },
+  {
+    title: "EU's top central bankers warn economy at risk from political standstill",
+    page_link_rel: "/news/articles/eu-top-central-bankers-warn-economy-at-risk",
+    img_link_rel: "/images/galhau.webp",
+    category: "Money",
+    date: " Nov 22, 2024",
+  },
 ];
 
 export default function Home() {
