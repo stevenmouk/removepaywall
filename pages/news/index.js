@@ -8,6 +8,13 @@ import SeoHead from "../../utils/seoHead";
 
 var listData = [
   {
+    title: "Russia recruits Yemeni mercenaries to fight in Ukraine",
+    page_link_rel: "/news/articles/russia-recruits-yemeni-mercenaries-to-fight-in-ukraine",
+    img_link_rel: "/images/yemini_mercenaries.webp",
+    category: "Politics",
+    date: " Nov 24, 2024",
+  },
+  {
     title: "Nvidia nearly doubles revenue as AI chip demand remains strong",
     page_link_rel: "/news/articles/nvidia-nearly-doubles-revenue",
     img_link_rel: "/images/nvidia.webp",
