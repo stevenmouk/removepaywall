@@ -8,6 +8,13 @@ import SeoHead from "../../utils/seoHead";
 
 var listData = [
   {
+    title: "US tells Ukraine to lower conscription age to 18 to stem manpower shortage",
+    page_link_rel: "/news/articles/us-urges-ukraine-to-lower-conscription-age-to-18",
+    img_link_rel: "/images/age18.webp",
+    category: "Politics",
+    date: " Nov 27, 2024",
+  },
+  {
     title: "North Korean casualties in Storm Shadow strike on Kursk, says Kyiv",
     page_link_rel: "/news/articles/north-korean-casualties-in-storm-shadow-strike",
     img_link_rel: "/images/north_korea.webp",
