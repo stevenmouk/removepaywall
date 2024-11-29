@@ -8,6 +8,13 @@ import SeoHead from "../../utils/seoHead";
 
 var listData = [
   {
+    title: "British Lawmakers Vote to Legalize Assisted Dying",
+    page_link_rel: "/news/articles/british-lawmakers-vote-to-legalize-assisted-dying",
+    img_link_rel: "/images/death.webp",
+    category: "Politics",
+    date: " Nov 29, 2024",
+  },
+  {
     title: "US tells Ukraine to lower conscription age to 18 to stem manpower shortage",
     page_link_rel: "/news/articles/us-urges-ukraine-to-lower-conscription-age-to-18",
     img_link_rel: "/images/age18.webp",
