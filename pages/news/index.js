@@ -8,6 +8,14 @@ import SeoHead from "../../utils/seoHead";
 
 var listData = [
   {
+    title: "Russia, Targeting Ukraine’s Grid, Moves to Cut Off Its Nuclear Plants",
+    page_link_rel:
+      "/news/articles/russia-targeting-ukraine-grid-moves-to-cut-off-Its-nuclear-plant",
+    img_link_rel: "/images/drone.webp",
+    category: "Politics",
+    date: " Nov 30, 2024",
+  },
+  {
     title: "Hizbollah chief vows to implement ceasefire with Israel in group’s heartland",
     page_link_rel: "/news/articles/hizbollah-chief-vows-to-implement-ceasefire-with-Israel",
     img_link_rel: "/images/naim.webp",
