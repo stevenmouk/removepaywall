@@ -8,6 +8,13 @@ import SeoHead from "../../utils/seoHead";
 
 var listData = [
   {
+    title: "Hizbollah chief vows to implement ceasefire with Israel in group’s heartland",
+    page_link_rel: "/news/articles/hizbollah-chief-vows-to-implement-ceasefire-with-Israel",
+    img_link_rel: "/images/naim.webp",
+    category: "Politics",
+    date: " Nov 30, 2024",
+  },
+  {
     title: "British Lawmakers Vote to Legalize Assisted Dying",
     page_link_rel: "/news/articles/british-lawmakers-vote-to-legalize-assisted-dying",
     img_link_rel: "/images/death.webp",
