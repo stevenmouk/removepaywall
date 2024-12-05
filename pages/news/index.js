@@ -8,6 +8,14 @@ import SeoHead from "../../utils/seoHead";
 
 var listData = [
   {
+    title:
+      "South Korean president accepts defense minister’s resignation amid backlash over martial law move",
+    page_link_rel: "/news/articles/south-korean-defense-minister-resigns-after-martial-law-move",
+    img_link_rel: "/images/korea_south.webp",
+    category: "Politics",
+    date: "Dec 4, 2024",
+  },
+  {
     title: "Russia, Targeting Ukraine’s Grid, Moves to Cut Off Its Nuclear Plants",
     page_link_rel:
       "/news/articles/russia-targeting-ukraine-grid-moves-to-cut-off-Its-nuclear-plant",
