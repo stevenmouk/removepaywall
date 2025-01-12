@@ -78,10 +78,7 @@ export default function Home({ context }) {
   return (
     <>
       <Head>
-        <meta
-          name="viewport"
-          content="width=device-width; initial-scale=.5; maximum-scale=.5; minimum-scale=.5;"
-        />
+        <meta name="viewport" content="width=device-width;" />
       </Head>
 
       <div className="absolute z-20 bg-[#FFFEF0]  h-fit w-full top-0">
