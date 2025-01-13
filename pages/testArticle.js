@@ -35,54 +35,17 @@ export default function Home({ context }) {
     // console.log(e.target.value);
     setInput(e.target.value.split("?")[0]);
   }
-
-  useEffect(() => {
-    function resizeIframe() {
-      const container = document.getElementById("iframe-container");
-      const iframe = document.getElementById("content-frame");
-      const containerTop = container.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      const newHeight = windowHeight - containerTop - 20;
-      // 20px for some bottom margin
-      container.style.height = `${newHeight}px`;
-
-      // Add mobile scaling
-      if (window.innerWidth < 640) {
-        // extra small devices
-        iframe.style.transform = "scale(0.5)";
-        iframe.style.width = "200%";
-        iframe.style.height = "200%";
-      } else if (window.innerWidth < 768) {
-        // small devices
-        iframe.style.transform = "scale(0.6)";
-        iframe.style.width = "166.67%";
-        iframe.style.height = "166.67%";
-      } else if (window.innerWidth < 1024) {
-        // medium devices
-        iframe.style.transform = "scale(0.8)";
-        iframe.style.width = "125%";
-        iframe.style.height = "125%";
-      } else {
-        // large devices
-        iframe.style.transform = "scale(0.99)";
-        iframe.style.width = "100%";
-        iframe.style.height = "100%";
-      }
-    }
-
-    resizeIframe();
-
-    // Add event listener for window resize
-    window.addEventListener("resize", resizeIframe);
-  }, []);
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width;" />
+        <meta
+          name="viewport"
+          content="width=device-width; initial-scale=.5; maximum-scale=.5; minimum-scale=.5;"
+        />
       </Head>
 
-      {/* <div className="absolute z-20 bg-[#FFFEF0]  h-fit w-full top-0"> */}
-      {/* <Link href="/" className="cursor-pointer">
+      <div className="fixed bg-[#FFFEF0]  h-fit w-full top-0">
+        <Link href="/" className="cursor-pointer">
           <div
             className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className} w-fit mt-2`}
           >
@@ -95,7 +58,7 @@ export default function Home({ context }) {
           onSubmit={handleSubmit}
           className="w-full  flex items-center justify-center"
         >
-          <div className="items-center sm:w-[60%] w-full mb-3  max-w-screen-sm flex justify-center ssm:space-y-0">
+          <div className="items-center w-[60%] mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
             <div className="relative w-full">
               <label
                 htmlFor="email"
@@ -129,10 +92,17 @@ export default function Home({ context }) {
                 required
               />
             </div>
-            <div></div>
+            <div>
+              {/* <button
+                          type="submit"
+                          className="py-3 px-5  text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-red-500 border-red-500 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-red-500 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        >
+                          Search
+                        </button> */}
+            </div>
             <button
               type="submit"
-              className="h-10 w-24 ml-2 text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-red-500 border-red-500  rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-white dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              className="py-3 px-5  ml-2 text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-red-500 border-red-500  rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-white dark:hover:bg-primary-700 dark:focus:ring-primary-800"
             >
               Search
             </button>
@@ -204,52 +174,41 @@ export default function Home({ context }) {
               5
             </span>
           </button>
-        </div>*/}
-      {/* </div> */}
-      <div className={`absolute z-[20] bg-[#F9F6EE] border-b border-[black] h-fit w-full top-0`}>
-        <div>
-          <header>
-            <nav className="items-center max-w-screen-xl px-4 pt-2 mx-auto sm:px-8 md:flex md:space-x-6">
-              <div className="flex justify-between pointer">
-                <Link href="/">
-                  <Image src="/DCE-4.svg" width={40} height={40} alt="RemovePaywall" />
-                </Link>
-              </div>
-            </nav>
-          </header>
+        </div>
+      </div>
+      <div className="w-[100%] h-[100vh] overflow-scroll flex    justify-center">
+        <iframe src={article} width="100%" height="2000px" rel="nofollow"></iframe>
+      </div>
+      {/* <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700  " />
 
-          <div className="searchBarText">
-            <div className="text-sm font-normal text-gray-500 ">
-              {" "}
-              *Click the different buttons to search various archives{" "}
-            </div>
+      <Faq />
+
+      <footer className="p-4  bg-[#FFFEF0] sm:p-6 dark:bg-gray-800">
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2024{" "}
+            <a href="/" className="hover:underline">
+              Archive Buttons™
+            </a>
+            . All Rights Reserved.
+          </span>
+
+          <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <Link className="text-gray-500 dark:hover:text-white" href="/privacy">
+              Privacy Policy
+            </Link>
+            <span>|</span>
+            <Link className="text-gray-500 dark:hover:text-white" href="/blog">
+              blog
+            </Link>
+            <span>|</span>
+            <p className="text-gray-500 dark:hover:text-white mr-24">
+              contact: archivebuttons@gmail.com
+            </p>
           </div>
         </div>
-
-        <div className=" mb-[-30px] bg-[red] w-[50px] h-[30px]  flex items-center  justify-center rounded-b-md ml-[20px] pointer">
-          <svg
-            className=" w-[20px] h-[20px]  align-middle"
-            fill="black"
-            stroke="red"
-            strokeWidth="0px"
-            viewBox="0 0 512 512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M256 217.9L383 345c9.4 9.4 24.6 9.4 33.9 0 9.4-9.4 9.3-24.6 0-34L273 167c-9.1-9.1-23.7-9.3-33.1-.7L95 310.9c-4.7 4.7-7 10.9-7 17s2.3 12.3 7 17c9.4 9.4 24.6 9.4 33.9 0l127.1-127z"></path>
-          </svg>
-        </div>
-      </div>
-
-      <div className="flex flex-col min-h-screen ">
-        <div id="iframe-container" className="relative flex-grow w-full">
-          <iframe
-            id="content-frame"
-            className="absolute inset-0 w-full h-full border-0"
-            style={{ transform: "scale(0.99)", transformOrigin: "0 0" }}
-            src={article}
-          />
-        </div>
-      </div>
+      </footer> */}
     </>
   );
 }

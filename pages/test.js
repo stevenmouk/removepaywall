@@ -15,7 +15,7 @@ export default function Home() {
     e.preventDefault();
     // console.log(e.target[0].value);
 
-    router.push(`/testArticle?article=${e.target[0].value}`);
+    window.location.href = `/testArticle?article=${e.target[0].value}`;
   }
 
   function handleStuff(e) {
