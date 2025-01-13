@@ -206,6 +206,40 @@ export default function Home({ context }) {
           </button>
         </div>*/}
       {/* </div> */}
+      <div className={`absolute z-[20] bg-[#F9F6EE] border-b border-[black] h-fit w-full top-0`}>
+        <div>
+          <header>
+            <nav className="items-center max-w-screen-xl px-4 pt-2 mx-auto sm:px-8 md:flex md:space-x-6">
+              <div className="flex justify-between pointer">
+                <Link href="/">
+                  <Image src="/DCE-4.svg" width={40} height={40} alt="RemovePaywall" />
+                </Link>
+              </div>
+            </nav>
+          </header>
+
+          <div className="searchBarText">
+            <div className="text-sm font-normal text-gray-500 ">
+              {" "}
+              *Click the different buttons to search various archives{" "}
+            </div>
+          </div>
+        </div>
+
+        <div className=" mb-[-30px] bg-[red] w-[50px] h-[30px]  flex items-center  justify-center rounded-b-md ml-[20px] pointer">
+          <svg
+            className=" w-[20px] h-[20px]  align-middle"
+            fill="black"
+            stroke="red"
+            strokeWidth="0px"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M256 217.9L383 345c9.4 9.4 24.6 9.4 33.9 0 9.4-9.4 9.3-24.6 0-34L273 167c-9.1-9.1-23.7-9.3-33.1-.7L95 310.9c-4.7 4.7-7 10.9-7 17s2.3 12.3 7 17c9.4 9.4 24.6 9.4 33.9 0l127.1-127z"></path>
+          </svg>
+        </div>
+      </div>
+
       <div className="flex flex-col min-h-screen ">
         <div id="iframe-container" className="relative flex-grow w-full">
           <iframe
