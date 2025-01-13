@@ -81,8 +81,8 @@ export default function Home({ context }) {
         <meta name="viewport" content="width=device-width;" />
       </Head>
 
-      <div className="absolute z-20 bg-[#FFFEF0]  h-fit w-full top-0">
-        {/* <Link href="/" className="cursor-pointer">
+      {/* <div className="absolute z-20 bg-[#FFFEF0]  h-fit w-full top-0"> */}
+      {/* <Link href="/" className="cursor-pointer">
           <div
             className={` text-rose-500 text-xl border-[2px] border-rose-500 px-3 py-3 rounded-full ${inter.className} w-fit mt-2`}
           >
@@ -205,7 +205,7 @@ export default function Home({ context }) {
             </span>
           </button>
         </div>*/}
-      </div>
+      {/* </div> */}
       <div className="flex flex-col min-h-screen ">
         <div id="iframe-container" className="relative flex-grow w-full">
           <iframe
