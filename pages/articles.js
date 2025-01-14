@@ -27,7 +27,7 @@ export default function Home({ context }) {
   function handleSubmit(e) {
     e.preventDefault();
     // console.log(e.target[0].value);
-    router.push(`/articles?article=${e.target[0].value}`);
+    window.location.href = `/articles?article=${e.target[0].value}`;
   }
 
   function handleInputChange(e) {
@@ -121,7 +121,7 @@ export default function Home({ context }) {
                 article?.includes("archive.is") ? "bg-red-500 text-white" : "bg-white text-black"
               }`}
             >
-              Archive.is
+              1
             </span>
           </button>
           <button
@@ -135,7 +135,7 @@ export default function Home({ context }) {
                 article?.includes("archive.org") ? "bg-red-500 text-white" : "bg-white text-black"
               }`}
             >
-              Archive.org
+              2
             </span>
           </button>
           <button
@@ -147,7 +147,7 @@ export default function Home({ context }) {
                 article?.includes("12ft.io") ? "bg-red-500 text-white" : "bg-white text-black"
               }`}
             >
-              12ft.io
+              3
             </span>
           </button>
           <button
@@ -157,7 +157,7 @@ export default function Home({ context }) {
             class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group   bg-red-500  hover:text-white dark:text-white"
           >
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-              Removepaywall.com
+              4
             </span>
           </button>
           <button
@@ -171,7 +171,7 @@ export default function Home({ context }) {
             class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group   bg-red-500  hover:text-white dark:text-white"
           >
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-              Google Cache
+              5
             </span>
           </button>
         </div>
