@@ -37,7 +37,8 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
-      res.status(200).send(defaultHTML);
+      console.log(response);
+      res.status(500).send(defaultHTML);
       return;
     }
 
