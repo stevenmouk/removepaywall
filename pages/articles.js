@@ -21,7 +21,8 @@ export default function Home({ context }) {
     //   return acc + separator + part;
     // }, "");
     setInput(context.article);
-    setArticle(`https://archive.is/newest/${context.article?.trim()?.split("?")[0]}`);
+    // setArticle(`https://archive.is/newest/${context.article?.trim()?.split("?")[0]}`);
+    setArticle(`https://web.archive.org/${context.article?.trim()?.split("?")[0]}`);
   }, [context]);
 
   function handleSubmit(e) {
@@ -110,7 +111,7 @@ export default function Home({ context }) {
         </form>
 
         <div className=" w-full flex items-center justify-center">
-          <button
+          {/* <button
             onClick={() =>
               setArticle(`https://archive.is/newest/${context.article?.trim()?.split("?")[0]}`)
             }
@@ -123,7 +124,7 @@ export default function Home({ context }) {
             >
               1
             </span>
-          </button>
+          </button> */}
           <button
             onClick={() =>
               setArticle(`https://web.archive.org/${context.article?.trim()?.split("?")[0]}`)
@@ -135,7 +136,7 @@ export default function Home({ context }) {
                 article?.includes("archive.org") ? "bg-red-500 text-white" : "bg-white text-black"
               }`}
             >
-              2
+              1
             </span>
           </button>
           <button
@@ -147,7 +148,7 @@ export default function Home({ context }) {
                 article?.includes("12ft.io") ? "bg-red-500 text-white" : "bg-white text-black"
               }`}
             >
-              3
+              2
             </span>
           </button>
           <button
@@ -157,7 +158,7 @@ export default function Home({ context }) {
             class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group   bg-red-500  hover:text-white dark:text-white"
           >
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-              4
+              3
             </span>
           </button>
           <button
@@ -171,7 +172,7 @@ export default function Home({ context }) {
             class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group   bg-red-500  hover:text-white dark:text-white"
           >
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-              5
+              4
             </span>
           </button>
         </div>
