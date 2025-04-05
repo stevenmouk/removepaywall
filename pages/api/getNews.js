@@ -21,6 +21,8 @@ export default async function handler(req, res) {
   }
 
   const randomUA = new UserAgent().toString();
+
+  console.log(randomUA);
   try {
     const url = `https://archive.is/newest/${q}`;
 
