@@ -1,47 +1,40 @@
 import { parse } from "node-html-parser";
+import UserAgent from "user-agents";
 
 const defaultHTML = `
-  <!DOCTYPE html>
-  <html>
-    <body>
+    <!DOCTYPE html>
+    <html>
       <h1>Article Not Found.</h1>
     </body>
-  </html>`;
+    </html>`;
 
 export default async function handler(req, res) {
   const { q } = req.query;
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 30000);
-
   res.setHeader("Content-Type", "text/html");
+  // Cache for 30 minutes
+  /* res.setHeader('Cache-Control', 'public, max-age=1800, stale-while-revalidate=59'); */
 
   if (!q) {
     res.status(200).send(defaultHTML);
     return;
   }
 
+  const randomUA = new UserAgent().toString();
   try {
     const url = `https://archive.is/newest/${q}`;
 
     const response = await fetch(url, {
       method: "GET",
-      signal: controller.signal,
       redirect: "follow",
       headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+        "User-Agent": randomUA,
         Accept:
           "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9",
         Referer: "https://archive.is/",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "same-origin",
       },
     });
-
-    clearTimeout(timeout);
 
     if (!response.ok) {
       res.status(200).send(defaultHTML);
@@ -51,18 +44,21 @@ export default async function handler(req, res) {
     const text = await response.text();
     const root = parse(text);
 
-    // Remove all <header> elements
-    let selector = root.querySelector("header");
-
+    let selector = root.querySelector("head");
     if (selector) selector.remove();
 
-    // Remove the element with id="Header"
-    root.querySelectorAll("#HEADER").forEach((el) => el.remove());
+    root.querySelector("#HEADER").remove();
+    root.querySelector("#hashtags").remove();
 
-    // Send the entire modified HTML
-    res.status(200).send(root.toString());
+    let clean = root.outerHTML;
+
+    clean = clean.replaceAll('src="', 'src="https://archive.is');
+
+    res.status(200).send(clean);
+    return;
   } catch (e) {
-    console.error("Error fetching/parsing:", e);
+    console.log(e);
     res.status(200).send(defaultHTML);
+    return;
   }
 }
