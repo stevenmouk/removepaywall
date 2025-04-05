@@ -1,67 +1,40 @@
-import { parse } from "node-html-parser";
-import UserAgent from "user-agents";
-
-const defaultHTML = `
-    <!DOCTYPE html>
-    <html>
-      <h1>Article Not Found.</h1>
-    </body>
-    </html>`;
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default async function handler(req, res) {
   const { q } = req.query;
 
-  res.setHeader("Content-Type", "text/html");
-  // Cache for 30 minutes
-  /* res.setHeader('Cache-Control', 'public, max-age=1800, stale-while-revalidate=59'); */
-
   if (!q) {
-    res.status(404).send(defaultHTML);
-    return;
+    return res.status(400).json({ error: "Missing 'q' query parameter" });
   }
 
-  const randomUA = new UserAgent().toString();
-
-  console.log(randomUA);
   try {
-    const url = `https://archive.is/newest/${q}`;
-
-    const response = await fetch(url, {
-      method: "GET",
-      redirect: "follow",
+    const response = await fetch(q, {
       headers: {
-        "User-Agent": randomUA,
         Accept:
           "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Encoding": "gzip, deflate, br",
         "Accept-Language": "en-US,en;q=0.9",
-        Referer: "https://archive.is/",
+        "Cache-Control": "no-cache",
+        Connection: "keep-alive",
+        Pragma: "no-cache",
+        "Upgrade-Insecure-Requests": "1",
+        Referer: "https://www.google.com/",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
       },
+      method: "GET",
     });
 
-    if (!response.ok) {
-      console.log(response);
-      res.status(500).send(defaultHTML);
-      return;
-    }
+    const html = await response.text();
 
-    const text = await response.text();
-    const root = parse(text);
-
-    let selector = root.querySelector("head");
-    if (selector) selector.remove();
-
-    root.querySelector("#HEADER").remove();
-    root.querySelector("#hashtags").remove();
-
-    let clean = root.outerHTML;
-
-    clean = clean.replaceAll('src="', 'src="https://archive.is');
-
-    res.status(200).send(clean);
-    return;
-  } catch (e) {
-    console.log(e);
-    res.status(500).send(defaultHTML);
-    return;
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    res.status(200).send(html);
+  } catch (error) {
+    console.error("Error fetching proxy content:", error);
+    res.status(500).json({ error: "Failed to fetch content" });
   }
 }
