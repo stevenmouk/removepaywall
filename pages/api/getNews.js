@@ -3,8 +3,8 @@
 export default async function handler(req, res) {
   const { q } = req.query;
 
-  if (!q) {
-    return res.status(400).json({ error: "Missing 'q' query parameter" });
+  if (!q || q?.includes("travelzoo")) {
+    return res.status(400).json({ error: "Missing 'q' query parameter or blocked url" });
   }
 
   try {
