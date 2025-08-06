@@ -145,41 +145,40 @@ export default function Home() {
                         Read our Privacy Policy
                       </a> */}
                     </div>
-                    {/* <section className="bg-gray-900 rounded-xl flex flex-row mt-10">
-                      <Image
-                        src="/images/test4.png"
-                        width={200}
-                        height={100}
-                        className="object-fit w-[250px] h-[250px] rounded-xl p-3 hidden sm:inline"
-                      ></Image>
-                      <div>
-                        <div className=" px-4 mx-auto max-w-screen-xl lg:px-6">
-                          <div className="mx-auto max-w-screen-md sm:text-center">
-                            <h2 className="mb-4 text-3xl tracking-tight font-extrabold  sm:text-4xl text-white">
-                              Sign up for our Finance Newsletter
-                            </h2>
-                            <p className="mx-auto  max-w-2xl font-light   sm:text-xl text-gray-400">
-                              Stay up to date with the latest finance news and market peformance
-                              without the clutter.
-                            </p>
+                    <Link
+                      href="https://mhtntimes.com"
+                      target="_blank"
+                      className="w-full flex justify-center"
+                    >
+                      <section className="bg-white w-[70%] border-2 border-black rounded-xl flex flex-row mt-10">
+                        <Image
+                          src="/images/manhattanTimes.svg"
+                          width={100}
+                          height={100}
+                          className="object-fit w-[150px] h-[150px] rounded-xl p-3 hidden sm:inline"
+                        ></Image>
+                        <div>
+                          <div className=" px-4 mx-auto max-w-screen-xl lg:px-6">
+                            <div className="mx-auto max-w-screen-md sm:text-center">
+                              <h2 className="mb-4 text-xl tracking-tight font-extrabold  sm:text-2xl text-black">
+                                Check out our very own news website! No paywalls ever!
+                              </h2>
+                            </div>
                           </div>
-                        </div>
 
-                        <div className="w-full flex items-center justify-center">
-                          <Link
-                            href="https://pure.news"
-                            target="_blank"
-                            className=" hover:text-white focus:outline-none text-white bg-red-500
+                          <div className="w-full flex items-center justify-center">
+                            <div
+                              className=" hover:text-white focus:outline-none text-white bg-red-500
                             hover:bg-red-700 focus:ring-4 focus:ring-red-300 font-medium rounded-lg
                             text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700
                             dark:focus:ring-red-900 w-[30%] hover:cursor-pointer "
-                          >
-                            Subscribe
-                          </Link>
+                            >
+                              Visit
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </section>
-                  */}
+                      </section>
+                    </Link>
                   </form>
                 </div>
               </div>
