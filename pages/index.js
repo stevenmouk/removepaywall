@@ -155,6 +155,7 @@ export default function Home() {
                           src="/images/manhattanTimes.svg"
                           width={100}
                           height={100}
+                          unoptimized
                           className="object-fit w-[150px] h-[150px] rounded-xl p-3 hidden sm:inline"
                         ></Image>
                         <div>
