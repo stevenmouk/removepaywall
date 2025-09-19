@@ -145,7 +145,7 @@ export default function Home() {
                         Read our Privacy Policy
                       </a> */}
                     </div>
-                    <Link
+                    {/* <Link
                       href="https://mhtntimes.com"
                       target="_blank"
                       className="w-full flex justify-center"
@@ -180,6 +180,7 @@ export default function Home() {
                         </div>
                       </section>
                     </Link>
+                  */}
                   </form>
                 </div>
               </div>
